@@ -13,7 +13,7 @@ def create_arg_parser() -> argparse.ArgumentParser:
     """
     parser = argparse.ArgumentParser(
         description="Unduh video dari tautan Videq, Vidoza, dan host serupa lainnya dengan mudah melalui baris perintah.",
-        epilog="Contoh: python -m vidoza_downloader.main https://videq.co/e/z40jeu954mk5 -o VideoSaya",
+        epilog="Contoh: python -m vidoza_downloader.main https://videq.fit/e/z40jeu954mk5 -o VideoSaya",
         formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument(

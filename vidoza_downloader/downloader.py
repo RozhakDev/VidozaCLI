@@ -56,7 +56,7 @@ class VideqDownloader:
         info_url = self._construct_info_url(url, video_id)
         video_info = await self._get_video_info(info_url)
 
-        object_key = await self._get_object_key(video_id)
+        object_key = await self._get_object_key(video_id, url)
         if not object_key:
             self.logger.error(f"Tidak dapat mengambil kunci objek untuk ID: {video_id}. Melewatkan unduhan.")
             return
@@ -106,12 +106,14 @@ class VideqDownloader:
             self.logger.error(f"Kesalahan jaringan saat mengambil info video: {e}")
         return {}
 
-    async def _get_object_key(self, video_id: str) -> Optional[str]:
+    async def _get_object_key(self, video_id: str, original_url: str) -> Optional[str]:
         """Mengambil objectKey dari halaman embed."""
         embed_url = f"https://embed.video-src.com/vplayer?id={video_id}"
         self.logger.debug(f"Mengambil objectKey dari: {embed_url}")
         try:
             headers = network.get_embed_headers(video_id)
+            parsed_original = urlparse(original_url)
+            headers.update({"Referer": f"{parsed_original.scheme}://{parsed_original.netloc}/"})
             async with self.session.get(embed_url, headers=headers) as response:
                 if response.status == 200:
                     content = await response.text()

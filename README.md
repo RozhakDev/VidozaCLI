@@ -6,7 +6,7 @@
 
 ## 📚 Latar Belakang
 
-Platform streaming seperti [`videq.com`](https://videq.com) sering kali menyajikan konten bermanfaat, namun iklan agresif dan potensi malware dapat mengganggu kenyamanan serta keamanan pengguna. **VidozaCLI** hadir sebagai solusi: mengunduh video langsung tanpa membuka peramban, tanpa iklan, dan tanpa risiko.
+Platform streaming seperti [`videq.fitm`](https://videq.fitm) sering kali menyajikan konten bermanfaat, namun iklan agresif dan potensi malware dapat mengganggu kenyamanan serta keamanan pengguna. **VidozaCLI** hadir sebagai solusi: mengunduh video langsung tanpa membuka peramban, tanpa iklan, dan tanpa risiko.
 
 Dengan rekayasa permintaan HTTP tingkat lanjut, VidozaCLI meniru interaksi peramban yang sah, melewati mekanisme keamanan sederhana, dan memastikan pengunduhan yang bersih serta efisien.
 
@@ -57,22 +57,22 @@ vidozaCLI <tautan_1> <tautan_2> ... [opsi]
 - **Unduh satu video:**
   
   ```bash
-  vidozaCLI https://videq.co/e/z40jeu954mk5
+  vidozaCLI https://videq.fit/e/z40jeu954mk5
   ```
 - **Unduh beberapa video sekaligus:**
   
   ```bash
-  vidozaCLI https://videq.co/e/z40jeu954mk5,https://videq.my/d/z40jeu954mk5
+  vidozaCLI https://videq.fit/e/z40jeu954mk5,https://videq.my/d/z40jeu954mk5
   ```
 - **Simpan ke direktori tertentu:**
   
   ```bash
-  vidozaCLI https://videq.co/e/z40jeu954mk5 -o "D:/Koleksi Video/Anime"
+  vidozaCLI https://videq.fit/e/z40jeu954mk5 -o "D:/Koleksi Video/Anime"
   ```
 - **Mode verbose untuk debugging:**
   
   ```bash
-  vidozaCLI https://videq.co/e/z40jeu954mk5 -v
+  vidozaCLI https://videq.fit/e/z40jeu954mk5 -v
   ```
 
 ## 🗂️ Struktur Proyek
